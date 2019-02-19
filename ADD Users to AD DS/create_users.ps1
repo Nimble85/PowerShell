@@ -1,0 +1,3 @@
+Set-ExecutionPolicy Unrestricted
+import-module activedirectory
+Import-CSV -Path "C:\scripts\users.csv" | ForEach-Object {New-ADuser -Name $_.DisplayName -SamAccountName $_.Name -Surname $_.Surname -GivenName $_.GivenName -DisplayName $_.DisplayName -Path "OU=Users,OU=Department,OU=Organization,DC=ad,DC=namedomen,DC=lan" -CannotChangePassword $false -ChangePasswordAtLogon $false -PasswordNotRequired $false -PasswordNeverExpires $true -AccountPassword (ConvertTo-SecureString -AsPlainText $_.Password -Force) -Enabled $true -EmailAddress $_.EmailAddress -Description $_.Description -UserPrincipalName $_.UserPrincipalName}
