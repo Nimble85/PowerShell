@@ -1,0 +1,3 @@
+Name,Surname,GivenName,DisplayName,Password,EmailAddress,Description,UserPrincipalName
+a.ivanov,Ivanov,Anton,Anton Ivanov,p@ssw0rd,a.ivanov@mydomane.com,Analysis,a.ivanov
+a.petrov,Petrov,Alexandr,Alexandr Petrov,p@ssw0rd,a.petrov@mydomain.com,Business Analysis,a.petrov
